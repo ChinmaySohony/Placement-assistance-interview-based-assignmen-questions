@@ -125,3 +125,250 @@ controls, offline capabilities, performance optimizations, mobile-friendliness, 
 compatibility.
 
 ```
+
+<br>
+
+### 7) Create a simple Music player using html only
+
+<br>
+
+#### Answer :
+Answer file :html question no 6
+  <br>
+
+### 8) What is the difference between `<figure>` tag and `<img>` tag?
+
+<br>
+
+#### Answer :
+  The <figure> tag and the <img> tag serve different purposes and are used in different contexts:
+<img> tag: The <img> tag is used to embed an image within an HTML document. It is a self-closing
+tag and does not have any content. It requires the src attribute to specify the path or URL of the
+image file and typically includes the alt attribute for providing alternative text that describes the
+image. The <img> tag is primarily used to display a standalone image on a web page.
+  
+```
+
+<br>
+
+### 9) What’s the difference between html tag and attribute and give example of some global attributes?
+
+<br>
+
+#### Answer :
+
+```
+The HTML tag and attribute are two different concepts within HTML:
+HTML Tag: An HTML tag represents an element in an HTML document. It defines the structure and
+functionality of the content within the document. Tags are enclosed in angle brackets (< >) and can
+be either opening tags, self-closing tags, or closing tags. Examples of HTML tags include <div>, <p>,
+<h1>, <img>, etc. HTML tags define the elements that make up the structure of a webpage.
+HTML Attribute: An HTML attribute provides additional information about an HTML element.
+Attributes are added within the opening tag of an HTML element to modify its behavior or provide
+extra details. They are composed of a name-value pair. The attribute name specifies the property or
+characteristic, while the attribute value provides the corresponding value for that property.
+Attributes can be applied to various HTML elements to customize their behavior and appearance.
+Examples of HTML attributes include src, alt, href, class, id, style, etc.
+Here are some examples of global attributes, which can be applied to most HTML elements:
+class: Specifies one or more class names to associate with an element, allowing CSS and JavaScript to
+target and style the element.
+Example: <div class="container">
+id: Specifies a unique identifier for an element, which can be used to target the element with CSS or
+JavaScript.
+Example: <p id="my-paragraph">
+style: Defines inline CSS styles to apply to an element.
+Example: <h1 style="color: red;">Heading</h1>
+title: Provides additional information about an element when hovering over it.
+Example: <a href="#" title="Click here">Link</a>
+data-*: Allows custom data attributes to be added to elements, which can be accessed via JavaScript
+for various purposes.
+Example: <div data-custom-attribute="value">
+aria-*: Used to define accessibility-related attributes, providing additional information to assistive
+technologies and screen readers.
+Example: <button aria-label="Close">X</button>
+These global attributes can be applied to various HTML elements to customize their behavior,
+appearance, or accessibility features. It's important to note that some attributes are specific to
+certain elements, while global attributes can be used across different elements.
+  ```
+
+<br>
+
+### 10) build Table which looks like the given image
+
+<br>
+
+#### Answer :
+  Answer file:html question no 10
+  <br>
+
+## CSS Questions :
+
+<br>
+
+### 1) Whats Box Model in CSS & Which CSS Properties are part of it ?
+
+<br>
+
+#### Answer :
+
+```
+  The box model is a fundamental concept in CSS (Cascading Style Sheets) that describes how
+elements are rendered and how their dimensions and spacing are calculated. It consists of several
+properties that define the content area, padding, border, and margin of an element.
+The CSS properties that are part of the box model are:
+Content: The actual content of an element, such as text or an image. The content area is controlled
+by the width and height properties.
+Padding: The space between the content area and the element's border. Padding can be set using
+the padding property or individual properties like padding-top, padding-right, padding-bottom, and
+padding-left.
+Border: The border surrounding the element's content and padding. The border can be set using the
+border property or individual properties like border-width, border-style, and border-color.
+Margin: The space outside the element, creating the gap between adjacent elements. Margin can be
+set using the margin property or individual properties like margin-top, margin-right, margin-bottom,
+and margin-left.
+
+  ```
+
+<br>
+
+### 2) What are the Different Types of Selectors in CSS & what are the advantages of them?
+
+<br>
+
+#### Answer :
+
+```
+  There are many selectors are present in css. first one is Element Selectors, it's Select elements based on their HTML tag name. Class Selectors, it's Select elements based on their assigned class attribute. ID Selectors, it's Select a specific element based on its assigned ID attribute. Attribute Selectors, it's Select elements based on their attribute values. Pseudo-classes and Pseudo-elements: Select elements based on specific states or conditions or target specific parts of an element.
+```
+
+<br>
+
+### 3) What is VW/VH & How its different from PX?
+
+<br>
+
+#### Answer :
+
+```
+  VW (Viewport Width) and VH (Viewport Height) are CSS units that are relative to the size of the
+viewport, which is the visible portion of the browser window.
+VW (Viewport Width): The VW unit represents a percentage of the viewport's width. 1 VW is equal
+to 1% of the viewport width. For example, if the viewport width is 1000 pixels, 1 VW is equivalent to
+10 pixels.
+VH (Viewport Height): The VH unit represents a percentage of the viewport's height. 1 VH is equal to
+1% of the viewport height. For example, if the viewport height is 800 pixels, 1 VH is equivalent to 8
+pixels.
+The key difference between VW/VH and PX (pixels) is that VW and VH are relative units that scale
+based on the size of the viewport, while pixels (PX) are absolute units that represent a fixed size.
+Using VW and VH units can be beneficial in creating responsive and fluid layouts that adapt to
+different screen sizes. For example, you can set an element's width to 50 VW, and it will always
+occupy 50% of the viewport width regardless of the device or screen size.
+On the other hand, pixels (PX) are fixed units that maintain a consistent size regardless of the
+viewport. If you set an element's width to 200 pixels, it will always have a width of 200 pixels,
+regardless of the viewport size.
+VW and VH units are particularly useful for creating responsive designs that adjust dynamically
+based on the available screen space. They provide a way to size elements proportionally to the
+viewport, allowing for better flexibility and adaptability in different viewing environments.
+  ```
+
+<br>
+
+### 4) Whats difference between Inline, Inline Block and block ?
+
+<br>
+
+#### Answer :
+
+```
+  The differences between inline, inline-block, and block display properties in CSS relate to how
+elements are rendered and how they interact with other elements on the page:
+Inline: Elements displayed as inline do not start on a new line and only take up as much width as
+necessary to contain their content. They flow alongside each other horizontally, and their height and
+width are determined by their content. Examples of inline elements are <span>, <a>, <strong>,
+<em>, etc.
+Inline-block: Elements displayed as inline-block have characteristics of both inline and block
+elements. They flow alongside each other horizontally like inline elements, but they also respect
+width, height, padding, and margins like block elements. This means you can set width and height
+values, apply margins and padding, and have them affect the layout without forcing a line break.
+Examples of inline-block elements are <img>, <input>, and elements styled with display: inline-block.
+Block: Elements displayed as block start on a new line and take up the entire width available by
+default. They create a block-level box, which means they have line breaks before and after them,
+and can have margins, padding, and width/height set. Examples of block elements are <div>, <p>,
+<h1> to <h6>, <section>, etc.
+  ```
+
+<br>
+
+### 5)How is Border-box different from Content Box?
+  <br>
+
+#### Answer :
+
+```
+  The difference between border-box and content-box is related to how the width and height of an
+element are calculated and how the box model properties (content, padding, border, and margin)
+affect the overall size of the element.
+Content-box: The content-box is the default box-sizing property value. With content-box, the width
+and height of an element only include the content area. In other words, any padding, border, or
+margin applied to the element is added to the specified width and height. This means that the total
+size of the element will be the sum of its content width/height, padding width/height, and border
+width/height.
+```
+
+<br>
+
+### 6) What’s z-index and How does it Function ?
+
+<br>
+
+#### Answer :
+
+```
+  z-index is a CSS property that controls the stacking order of positioned elements on the z-axis
+(depth) of a web page. It specifies the order in which elements are stacked or layered in relation to
+each other. Elements with a higher z-index value will appear in front of elements with a lower value.
+Here's how z-index functions:
+Default Stacking Order: By default, elements have a z-index value of auto. Elements are rendered in
+the order they appear in the HTML markup, with later elements appearing on top of earlier ones.
+Positioned Elements: The z-index property only applies to positioned elements, i.e., elements with a
+CSS position value of relative, absolute, or fixed. It does not have any effect on non-positioned
+elements.
+Stacking Context: Each positioned element creates a stacking context. The z-index property applies
+within the stacking context of an element. An element with a higher z-index value within its stacking
+context will appear in front of elements with lower values.
+Higher Values = Closer to the Viewer: The stacking order is determined by the numeric z-index value.
+The element with the highest z-index appears in front of other elements within the same stacking
+context. Negative values can also be used to position elements behind others.
+Parent-Child Relationship: When elements are nested, the z-index property of child elements is
+relative to the stacking context of their parent. If a parent element has a higher z-index value than its
+child, the child element cannot appear in front of the parent.
+It's important to note that z-index only affects elements within the same stacking context. If two
+elements are in different stacking contexts, their z-index values do not directly compare to each
+other.
+Using z-index, you can control the visual layering and stacking order of elements on a web page. It
+allows you to position elements in front of or behind other elements, creating depth and visual
+hierarchy in your design.
+  
+```
+
+<br>
+
+### 9) Build given layout using grid or flex see below image for reference
+
+<br>
+
+#### Answer :
+
+Answer file: CSS question no 9 
+
+<br>
+
+### 10) Build Responsive Layout both desktop and mobile and Tablet, see below image for reference ?
+
+<br>
+
+#### Answer :
+
+Answer file : CSS-Question-10
+
+<br>
