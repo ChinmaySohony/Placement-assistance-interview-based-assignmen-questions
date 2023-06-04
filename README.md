@@ -352,6 +352,82 @@ hierarchy in your design.
 ```
 
 <br>
+### 7)Difference between absolute and relative and sticky and fixed position explain with
+example.
+  <br>
+  #### Answer :
+  
+  ```
+  The positioning properties in CSS, such as absolute, relative, sticky, and fixed, allow you to control
+the placement and behavior of elements on a web page. Here's a breakdown of each:
+Relative Positioning:
+With position: relative, an element is positioned relative to its normal position in the document flow.
+The element still occupies its original space in the layout, and other elements are not affected by its
+positioning.
+You can use properties like top, bottom, left, and right to offset the element from its original
+position.
+Example:
+css
+
+.box {
+ position: relative;
+ top: 20px;
+ left: 10px;
+}
+In this example, the .box element is positioned 20 pixels down and 10 pixels to the right from its
+normal position.
+Absolute Positioning:
+With position: absolute, an element is positioned relative to its nearest positioned ancestor, or the
+document if there is no positioned ancestor.
+The element is taken out of the normal document flow and does not leave a gap where it would
+have been.
+It is positioned based on the values of the properties top, bottom, left, and right, relative to its
+nearest positioned ancestor or the document.
+Example:
+css
+
+.box {
+ position: absolute;
+ top: 50px;
+ left: 100px;
+}
+In this example, the .box element is positioned 50 pixels down and 100 pixels to the right from its
+nearest positioned ancestor or the document.
+Sticky Positioning:
+With position: sticky, an element is positioned based on its normal position in the document flow
+until a specified threshold is met, and then it becomes sticky and remains fixed at that position.
+Sticky elements are positioned based on the values of top, bottom, left, and right relative to their
+containing block.
+Example:
+css
+
+.box {
+ position: sticky;
+ top: 20px;
+}
+In this example, the .box element is positioned 20 pixels from the top of its containing block. When
+the user scrolls past the threshold defined by the .box element's parent or nearest scrollable
+ancestor, it becomes sticky and remains fixed at that position.
+Fixed Positioning:
+With position: fixed, an element is positioned relative to the viewport, regardless of scrolling.
+The element is taken out of the normal document flow and does not move when the page is
+scrolled.
+It is positioned based on the values of top, bottom, left, and right relative to the viewport.
+Example:
+css
+
+.box {
+ position: fixed;
+ top: 20px;
+ right: 30px;
+}
+In this example, the .box element is positioned 20 pixels from the top and 30 pixels from the right of
+the viewport. It remains fixed at that position, even when the page is scrolled.
+These positioning properties provide flexibility in controlling the layout and behavior of elements on
+a web page, allowing you to achieve various visual effects and interactive designs.
+   ```
+  <br>
+  
 
 ### 9) Build given layout using grid or flex see below image for reference
 
