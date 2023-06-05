@@ -763,6 +763,7 @@ Third
 ### 6)What are promises? What are the different states of a promise? Support your answer with an example where you need to create your own promise.
 
 <br>
+
 ### Answer:
 ```
 Promises are a feature in JavaScript that allow you to handle asynchronous operations in a more
