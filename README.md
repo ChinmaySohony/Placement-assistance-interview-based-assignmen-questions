@@ -10,7 +10,6 @@
 
 ```
 ##### Answer :
-```
 Yes, <!DOCTYPE html> is indeed a tag in HTML. However, it is not a regular HTML element like <div>
 or <p>. Instead, it is called a document type declaration (DTD) and it is used to specify the version of
 HTML or XHTML that the document is written in.
