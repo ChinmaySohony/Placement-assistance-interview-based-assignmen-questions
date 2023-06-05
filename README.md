@@ -510,7 +510,7 @@ manipulating elements based on different criteria.
 ## Javascript questions:
 <br>
 
-### 1)What is Hoisting in Javascript ?
+### 1) What is Hoisting in Javascript ?
 <br>
 
 ### Answer:
@@ -550,7 +550,7 @@ respective scopes to improve code readability and avoid unexpected hoisting-rela
 ```
 <br>
 
-### 2)What are different higher order functions in JS? What is the difference between .map() and .forEach()?
+### 2) What are different higher order functions in JS? What is the difference between .map() and .forEach()?
 
 <br>
 
@@ -572,7 +572,7 @@ desired outcome of your code.
 
 <br>
 
-### 3)Explain Event bubbling and Event Capturing in JavaScript with suitable examples.
+### 3) Explain Event bubbling and Event Capturing in JavaScript with suitable examples.
 
 <br>
 
@@ -648,7 +648,7 @@ DOM structures and designing event-driven JavaScript applications.
 
 <br>
 
-### 4)What is function currying with example?
+### 4) What is function currying with example?
 
 <br>
 
@@ -690,7 +690,7 @@ those partially applied functions later.
 
 <br>
 
-### 5)Explain execution context diagram of following code snippets, use white board to draw.
+### 5) Explain execution context diagram of following code snippets, use white board to draw.
 
 <br>
 
@@ -760,7 +760,7 @@ Third
 
 <br>
 
-### 6)What are promises? What are the different states of a promise? Support your answer with an example where you need to create your own promise.
+### 6) What are promises? What are the different states of a promise? Support your answer with an example where you need to create your own promise.
 
 <br>
 
@@ -809,7 +809,7 @@ and handle both success and error cases in a more structured manner.
 ```
 <br>
 
-### 7)What is ‘this’ keyword in JavaScript? explain with an example & create.
+### 7) What is ‘this’ keyword in JavaScript? explain with an example & create.
 
 <br>
 
@@ -878,7 +878,7 @@ concatenate it with the string ' Camry'. The output will be 'Toyota Camry'.
 ```
 <br>
 
-### 8)Explain event loop Call Stack Callback queue and Micro Task queue in Your Words .
+### 8) Explain event loop Call Stack Callback queue and Micro Task queue in Your Words .
 
 <br>
 
@@ -922,3 +922,167 @@ the callback queue and microtask queue are executed in the appropriate order, pr
 browser from becoming unresponsive.
 ```
 
+<br>
+
+### 9) Explain event loop Call Stack Callback queue and Micro Task queue in Your Words .
+
+<br>
+
+### Answer:
+```
+Call Stack:
+The call stack is a data structure in JavaScript that keeps track of the execution context of functions.
+Whenever a function is called, a new frame (execution context) is pushed onto the stack. When a
+function completes its execution, its frame is popped off the stack. The call stack operates on a "last
+in, first out" (LIFO) principle.
+Callback Queue:
+The callback queue, also known as the task queue, is a queue that holds callback functions waiting to
+be executed. Callback functions are typically generated as a result of asynchronous operations, such
+as a timer, network request, or event listener. When an asynchronous operation completes, its
+corresponding callback function is placed in the callback queue.
+Microtask Queue:
+The microtask queue, also known as the job queue, is a queue that holds microtasks. Microtasks are
+tasks with higher priority than regular callback functions. They are usually scheduled for execution
+after the current JavaScript execution context finishes, but before the next rendering or user
+interaction. Promises and certain APIs, like queueMicrotask, add tasks to the microtask queue.
+Event Loop:
+The event loop is a mechanism in JavaScript that manages the execution of code, including handling
+asynchronous operations and ensuring smooth interaction with the browser environment. Its main
+purpose is to constantly monitor the call stack, callback queue, and microtask queue to determine
+which tasks can be executed next.
+Here's a simplified overview of how these components interact:
+Initially, the call stack is empty.
+As JavaScript code is executed, functions are pushed onto the call stack.
+When an asynchronous operation is encountered, such as a setTimeout or an AJAX request, the
+associated callback function is sent to the callback queue.
+After the call stack is empty, the event loop checks the microtask queue.
+If there are any tasks in the microtask queue, they are executed one by one until the microtask
+queue is empty.
+Once the microtask queue is empty, the event loop checks the callback queue.
+If there are any tasks in the callback queue, the event loop moves them to the call stack for
+execution.
+This process continues, with the event loop constantly monitoring the call stack, microtask queue,
+and callback queue.
+In simpler terms, the event loop keeps an eye on the call stack and queues. It ensures that tasks in
+the callback queue and microtask queue are executed in the appropriate order, preventing the
+browser from becoming unresponsive.
+```
+
+<br>
+
+### 10) Explain Debouncing and Create a project where you are using Debouncing.
+
+<br>
+
+### Answer:
+```
+Debouncing is a technique used in JavaScript to improve performance and optimize the execution of
+functions that are triggered by events, particularly events that occur frequently or rapidly. It helps to
+prevent excessive function calls by delaying the execution of a function until a certain amount of
+time has passed since the last occurrence of the event.
+The basic idea behind debouncing is to set up a timer that resets every time the event occurs. If the
+event continues to occur within a specified time period, the timer keeps resetting. However, if the
+event stops occurring for that time period, the function is finally executed.
+Here's an example to illustrate the concept of debouncing:
+
+javascript
+
+// Debounce function
+function debounce(func, delay) {
+ let timerId;
+
+ return function() {
+ const context = this;
+ const args = arguments;
+
+ clearTimeout(timerId);
+
+ timerId = setTimeout(function() {
+ func.apply(context, args);
+ }, delay);
+ };
+}
+
+// Example usage
+const searchInput = document.getElementById('search-input');
+const searchResults = document.getElementById('search-results');
+function search() {
+ // Simulated search functionality
+ const query = searchInput.value;
+ searchResults.textContent = `Searching for: ${query}`;
+}
+const debouncedSearch = debounce(search, 300);
+// Attach the debounced function to the input event
+searchInput.addEventListener('input', debouncedSearch);
+In the above example, we have a search functionality where the user types into an input field
+(searchInput). As the user types, an input event is triggered. Instead of executing the search function
+immediately on each input event, we wrap the search function with the debounce function.
+The debounce function takes two parameters: the original function (search) and a delay in
+milliseconds (300 in this case). It returns a new debounced function that is used as the event
+listener.
+The debounced function sets up a timer using setTimeout. Whenever the event occurs, the previous
+timer is cleared with clearTimeout and a new timer is started. This ensures that the original function
+(search) is only called when the specified delay (300 milliseconds) has passed since the last event.
+The result is that the search function is executed only after the user pauses typing for 300
+milliseconds. This helps to optimize performance and reduce unnecessary function calls, especially in
+scenarios where frequent or rapid events occur.
+Debouncing is commonly used in scenarios such as search suggestions, auto-saving forms, resizing
+events, or any situation where you want to delay the execution of a function until a certain period of
+inactivity occurs.
+```
+
+<br>
+
+### 11) Explain Closures and Use cases of Closures.
+
+<br>
+
+### Answer:
+```
+In JavaScript, a closure is a combination of a function and the lexical environment within which that
+function was declared. It allows a function to access variables and resources that are defined outside
+of its own scope, even after the outer function has finished executing. In other words, a closure
+"closes over" the variables from its outer function and preserves them for later use.
+Here's an example to illustrate closures:
+
+javascript
+
+function outerFunction() {
+ const outerVariable = 'Hello';
+ function innerFunction() {
+ console.log(outerVariable);
+ }
+ return innerFunction;
+}
+const closure = outerFunction();
+closure(); // Output: Hello
+In the above example, the outerFunction defines an outerVariable and an innerFunction. The
+innerFunction is returned from the outerFunction but still has access to the outerVariable, even
+though the outerFunction has finished executing. This is because the innerFunction forms a closure
+over the outerVariable, preserving its value.
+Closures are useful in various scenarios, including:
+Data Privacy: Closures allow you to create private variables and functions that are only accessible
+within a particular scope. The variables and functions inside a closure are not directly accessible
+from the outside, providing a way to encapsulate and protect data.
+Module Pattern: Closures are commonly used to implement the module pattern in JavaScript.
+Modules encapsulate related functionality and expose a public API while keeping internal details
+hidden. Closures help in achieving this by creating a private scope for the module's variables and
+functions.
+Event Handlers: Closures are often used in event handling to maintain access to variables or data
+when an event occurs. Event handlers can be defined within a function, allowing them to access
+variables from the outer function even after the event has been triggered.
+Memoization: Closures can be used to implement memoization, a technique for caching expensive
+function results. By caching the result of a function call in a closure, subsequent calls with the same
+arguments can retrieve the cached result without re-executing the function.
+Currying and Partial Application: Closures are instrumental in implementing currying and partial
+application, which involve creating new functions based on existing functions with some arguments
+pre-filled. Closures capture the pre-filled arguments and preserve them for future use when the new
+function is called.
+Closures are powerful and flexible constructs in JavaScript that provide a way to create and manage
+private state, encapsulate functionality, and control access to variables and resources. They offer a
+range of applications in various programming patterns and techniques.
+```
+
+<br>
+
+### 
