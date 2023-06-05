@@ -374,6 +374,7 @@ hierarchy in your design.
   
   ### 7)Difference between absolute and relative and sticky and fixed position explain with example.
   <br>
+  
   #### Answer :
   
   ```
