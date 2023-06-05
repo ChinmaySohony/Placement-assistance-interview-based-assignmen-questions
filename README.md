@@ -72,23 +72,23 @@ elements are the actual content within those containers.
 ### 4) Build Your Resume using HTML only
 
 <br>
-
+```
 ##### Answer :
 answer file :Html question no 4
 <br>
-
+```
 ### 5) Write Html code so that it looks like the given image
 
 <br>
-
+```
 ##### Answer :
 Answer file:html question no 5
 <br>
-
+```
 ### 6) What are some of the advantages of HsTML5 over its previous versions?
 
 <br>
-
+```
 ##### Answer :
 HTML5, the latest version of the Hypertext Markup Language, introduced several advancements and
 advantages over its previous versions. Here are some key advantages of HTML5:
@@ -125,20 +125,19 @@ controls, offline capabilities, performance optimizations, mobile-friendliness, 
 compatibility.
 
 ```
-<br>
 
 ### 7) Create a simple Music player using html only
 
 <br>
-
+```
 #### Answer :
 Answer file :html question no 6
   <br>
-
+```
 ### 8) What is the difference between `<figure>` tag and `<img>` tag?
 
 <br>
-
+```
 #### Answer :
   The <figure> tag and the <img> tag serve different purposes and are used in different contexts:
 <img> tag: The <img> tag is used to embed an image within an HTML document. It is a self-closing
