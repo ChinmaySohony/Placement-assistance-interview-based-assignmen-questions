@@ -508,9 +508,12 @@ manipulating elements based on different criteria.
 
 ## Javascript questions:
 <br>
+
 ### 1)What is Hoisting in Javascript ?
 <br>
+
 ### Answer:
+
 ```
 Hoisting is a behavior in JavaScript where variable and function declarations are moved to the top of
 their containing scope during the compilation phase, before the code is executed. This means that
@@ -547,8 +550,11 @@ respective scopes to improve code readability and avoid unexpected hoisting-rela
 <br>
 
 ### 2)What are different higher order functions in JS? What is the difference between .map() and .forEach()?
+
 <br>
+
 ### Answer:
+```
 The main differences between map() and forEach() are:
 Return Value: map() returns a new array with the transformed elements, while forEach() does not
 return anything. It simply iterates over the array and performs an action on each element.
@@ -562,9 +568,349 @@ is sufficient.
 It's important to choose the appropriate higher-order function based on your specific needs and the
 desired outcome of your code.
 ```
+
 <br>
 
 ### 3)Explain Event bubbling and Event Capturing in JavaScript with suitable examples.
 
+<br>
+### Answer:
+```
+Event bubbling and event capturing are two mechanisms used by JavaScript to handle events that
+occur on nested elements. They describe the order in which events are propagated through the
+DOM hierarchy.
+Event Bubbling:
+In event bubbling, the event is first captured and handled by the innermost element and then
+propagated up the DOM tree to the outermost element. This means that the event starts at the
+target element and bubbles up through its ancestors.
+Here's an example to illustrate event bubbling:
+html
 
+<div id="outer">
+ <div id="inner">
+ <button id="button">Click me</button>
+ </div>
+</div>
+<script>
+ const button = document.getElementById('button');
+ const inner = document.getElementById('inner');
+ const outer = document.getElementById('outer');
+ button.addEventListener('click', () => {
+ console.log('Button clicked');
+ });
+ inner.addEventListener('click', () => {
+ console.log('Inner div clicked');
+ });
+ outer.addEventListener('click', () => {
+ console.log('Outer div clicked');
+ });
+</script>
+When you click the button, the event starts at the button element, triggers the button's click event
+handler, and then bubbles up to the inner div and finally to the outer div. The output in the console
+will be:
+css
+
+Button clicked
+Inner div clicked
+Outer div clicked
+Event Capturing:
+In event capturing, the event is first captured and handled by the outermost element and then
+propagated down the DOM tree to the innermost element. This means that the event starts at the
+outermost element and captures the event as it moves towards the target element.
+To demonstrate event capturing, we can modify the previous example as follows:
+javascript
+
+// ...
+button.addEventListener('click', () => {
+ console.log('Button clicked');
+}, { capture: true });
+inner.addEventListener('click', () => {
+ console.log('Inner div clicked');
+}, { capture: true });
+outer.addEventListener('click', () => {
+ console.log('Outer div clicked');
+}, { capture: true });
+// ...
+By setting the capture option to true in the addEventListener method, the events will be captured
+during the capturing phase instead of the bubbling phase. The output in the console will now be:
+css
+
+Outer div clicked
+Inner div clicked
+Button clicked
+Note that by default, event listeners use the bubbling phase (capture: false). However, you can
+explicitly specify the capturing phase by setting capture: true when attaching an event listener.
+Understanding event bubbling and event capturing is crucial for handling events correctly in nested
+DOM structures and designing event-driven JavaScript applications.
+```
+
+<br>
+
+### 4)What is function currying with example?
+<br>
+### Answer:
+```
+Function currying is a technique in JavaScript where a function with multiple arguments is
+transformed into a sequence of functions, each taking a single argument. It allows you to partially
+apply a function by fixing some of its arguments, creating a new function that can be called with the
+remaining arguments later.
+Here's an example to illustrate function currying:
+javascript
+Copy code
+// Original function with multiple arguments
+function multiply(a, b, c) {
+ return a * b * c;
+}
+// Curried version of the multiply function
+function curriedMultiply(a) {
+ return function(b) {
+ return function(c) {
+ return a * b * c;
+ };
+ };
+}
+// Calling the curried function
+const result = curriedMultiply(2)(3)(4);
+console.log(result); // Output: 24
+In the above example, we have a multiply function that takes three arguments and returns their
+multiplication. We then define a curriedMultiply function that takes the first argument a and returns
+a new function that takes the second argument b and returns another function that takes the third
+argument c and finally performs the multiplication.
+By calling curriedMultiply(2)(3)(4), we are able to calculate the result of multiplying 2, 3, and 4,
+which is 24. The function calls are chained, where each subsequent function call returns a new
+function until all the arguments are provided.
+Function currying allows for more flexibility and reusability in function composition. It enables us to
+create specialized versions of functions by providing some arguments in advance and then reusing
+those partially applied functions later.
+```
+
+<br>
+
+### 5)Explain execution context diagram of following code snippets, use white board to draw.
+<br>
+### Answer:
+```
+Code Snippet 1:
+javascript
+
+console.log('First');
+setTimeout(() => console.log('Second'), 0);
+console.log('Third');
+The execution starts from the global execution context.
+The first statement console.log('First') is executed, and it logs 'First' to the console.
+The setTimeout function is called with a callback function and a delay of 0 milliseconds. This
+schedules the execution of the callback function to occur later, but not immediately.
+The statement console.log('Third') is executed, and it logs 'Third' to the console.
+The execution of the current context completes, and the event loop starts checking for any
+scheduled tasks.
+The event loop detects the scheduled task from setTimeout with a delay of 0 milliseconds. Since the
+delay is 0, the callback function is moved to the event queue.
+The event loop then checks the event queue, finds the callback function, and moves it to the call
+stack.
+The callback function () => console.log('Second') is executed, and it logs 'Second' to the console.
+The output in the console will be:
+sql
+
+First
+Third
+Second
+Code Snippet 2:
+javascript
+Copy code
+console.log('First');
+function secondCall() {
+ console.log('Second');
+}
+setTimeout(secondCall, 2000);
+setTimeout(() => console.log('Third'), 0);
+console.log('Third');
+The execution starts from the global execution context.
+The first statement console.log('First') is executed, and it logs 'First' to the console.
+The secondCall function is defined but not executed.
+The setTimeout function is called with secondCall as the callback function and a delay of 2000
+milliseconds. This schedules the execution of secondCall after a delay of 2000 milliseconds.
+Another setTimeout function is called with an arrow function () => console.log('Third') as the callback
+function and a delay of 0 milliseconds. This schedules the execution of the arrow function to occur
+later, but not immediately.
+The statement console.log('Third') is executed, and it logs 'Third' to the console.
+The execution of the current context completes, and the event loop starts checking for any
+scheduled tasks.
+After 2000 milliseconds, the event loop detects the scheduled task from the first setTimeout with a
+delay of 2000 milliseconds. The callback function secondCall is moved to the event queue.
+The event loop then checks the event queue, finds the callback function, and moves it to the call
+stack.
+The secondCall function is executed, and it logs 'Second' to the console.
+The event loop continues to check the event queue and finds the arrow function from the second
+setTimeout with a delay of 0 milliseconds.
+The arrow function () => console.log('Third') is moved to the call stack and executed, logging 'Third'
+to the console.
+The output in the console will be:
+sql
+First
+Third
+Second
+Third
+```
+
+<br>
+
+### 6)What are promises? What are the different states of a promise? Support your answer with an example where you need to create your own promise.
+
+<br>
+### Answer:
+```
+Promises are a feature in JavaScript that allow you to handle asynchronous operations in a more
+organized and readable way. They represent the eventual completion (or failure) of an asynchronous
+operation and allow you to attach callbacks to handle the results.
+A promise can be in one of the following three states:
+Pending: The initial state of a promise. It means that the asynchronous operation associated with the
+promise is still in progress and has not yet been fulfilled or rejected.
+Fulfilled: The state of a promise when the asynchronous operation is successfully completed. It
+means that the promise has resolved with a value.
+Rejected: The state of a promise when the asynchronous operation encounters an error or fails. It
+means that the promise has been rejected with a reason or an error object.
+Here's an example of creating and using a custom promise:
+javascript
+
+function fetchData() {
+ return new Promise((resolve, reject) => {
+ setTimeout(() => {
+ const data = 'Some data';
+ // Simulating a successful async operation
+ resolve(data);
+ // Simulating an error
+ // reject('Error occurred');
+ }, 2000);
+ });
+}
+// Using the custom promise
+fetchData()
+ .then((result) => {
+ console.log('Promise resolved:', result);
+ })
+ .catch((error) => {
+ console.log('Promise rejected:', error);
+ });
+In the above example, the fetchData function returns a custom promise. Within the promise
+constructor, there is a simulated asynchronous operation using setTimeout. After 2 seconds, the
+promise is resolved with the data value.
+You can use the promise by chaining .then() to handle the resolved state and .catch() to handle the
+rejected state. If the promise is resolved, the result will be logged to the console. If the promise is
+rejected, the error will be logged.
+By utilizing promises, you can effectively handle asynchronous operations, maintain code readability,
+and handle both success and error cases in a more structured manner.
+```
+<br>
+
+### 7)What is ‘this’ keyword in JavaScript? explain with an example & create.
+
+<br>
+### Answer:
+```
+In JavaScript, the this keyword refers to the context in which a function is called. It is a special
+keyword that allows you to access and manipulate the properties and methods of the object that the
+function is bound to. The value of this is determined dynamically at runtime based on how the
+function is invoked.
+The behavior of this can vary depending on the context in which it is used. Here are a few examples
+to illustrate its usage:
+Example 1: Global Scope
+javascript
+Copy code
+console.log(this); // Output: Window (global object in browser)
+In the global scope (outside of any function), this refers to the global object. In a browser
+environment, the global object is usually Window.
+Example 2: Object Method
+javascript
+Copy code
+const person = {
+ name: 'John',
+ greet: function() {
+ console.log(`Hello, ${this.name}!`);
+ }
+};
+person.greet(); // Output: Hello, John!
+In this example, this inside the greet method refers to the person object. It allows us to access the
+name property of the person object using dot notation.
+Example 3: Constructor Function
+javascript
+Copy code
+function Person(name) {
+ this.name = name;
+}
+const john = new Person('John');
+console.log(john.name); // Output: John
+When a function is used as a constructor function with the new keyword, this refers to the newly
+created object. In this example, this inside the Person constructor refers to the object being
+constructed, and we assign the name property to that object.
+Example 4: Event Handler
+javascript
+Copy code
+const button = document.getElementById('myButton');
+button.addEventListener('click', function() {
+ console.log(this); // Output: the button element
+});
+In an event handler function, such as the one attached to a button click event, this refers to the
+element that triggered the event. In this example, this refers to the button element itself.
+It's important to note that the value of this is not determined by how or where a function is defined,
+but rather by how it is called or invoked. The same function can have different values of this
+depending on how it is called.
+Creating a custom example:
+javascript
+Copy code
+const car = {
+ brand: 'Toyota',
+ getModel: function() {
+ return this.brand + ' Camry';
+ }
+};
+console.log(car.getModel()); // Output: Toyota Camry
+In this example, we have an object car with a brand property and a getModel method. Inside the
+getModel method, this refers to the car object, allowing us to access the brand property and
+concatenate it with the string ' Camry'. The output will be 'Toyota Camry'.
+```
+<br>
+
+### 8)Explain event loop Call Stack Callback queue and Micro Task queue in Your Words .
+
+<br>
+
+### Answer:
+```
+Call Stack:
+The call stack is a data structure in JavaScript that keeps track of the execution context of functions.
+Whenever a function is called, a new frame (execution context) is pushed onto the stack. When a
+function completes its execution, its frame is popped off the stack. The call stack operates on a "last
+in, first out" (LIFO) principle.
+Callback Queue:
+The callback queue, also known as the task queue, is a queue that holds callback functions waiting to
+be executed. Callback functions are typically generated as a result of asynchronous operations, such
+as a timer, network request, or event listener. When an asynchronous operation completes, its
+corresponding callback function is placed in the callback queue.
+Microtask Queue:
+The microtask queue, also known as the job queue, is a queue that holds microtasks. Microtasks are
+tasks with higher priority than regular callback functions. They are usually scheduled for execution
+after the current JavaScript execution context finishes, but before the next rendering or user
+interaction. Promises and certain APIs, like queueMicrotask, add tasks to the microtask queue.
+Event Loop:
+The event loop is a mechanism in JavaScript that manages the execution of code, including handling
+asynchronous operations and ensuring smooth interaction with the browser environment. Its main
+purpose is to constantly monitor the call stack, callback queue, and microtask queue to determine
+which tasks can be executed next.
+Here's a simplified overview of how these components interact:
+Initially, the call stack is empty.
+As JavaScript code is executed, functions are pushed onto the call stack.
+When an asynchronous operation is encountered, such as a setTimeout or an AJAX request, the
+associated callback function is sent to the callback queue.
+After the call stack is empty, the event loop checks the microtask queue.
+If there are any tasks in the microtask queue, they are executed one by one until the microtask
+queue is empty.
+Once the microtask queue is empty, the event loop checks the callback queue.
+If there are any tasks in the callback queue, the event loop moves them to the call stack for
+execution.
+This process continues, with the event loop constantly monitoring the call stack, microtask queue,
+and callback queue.
+In simpler terms, the event loop keeps an eye on the call stack and queues. It ensures that tasks in
+the callback queue and microtask queue are executed in the appropriate order, preventing the
+browser from becoming unresponsive.
+```
 
