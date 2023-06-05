@@ -449,15 +449,22 @@ a web page, allowing you to achieve various visual effects and interactive desig
    
   <br>
   
+  ### 8)Build Periodic Table as shown in the below image
+  <br>
+  #### Answer:
+  ```
+  Answer file: CSS question no 8
+  ```
+  <br>
 
 ### 9) Build given layout using grid or flex see below image for reference
 
 <br>
 
 #### Answer :
-
+```
 Answer file: CSS question no 9 
-
+```
 <br>
 
 
@@ -470,3 +477,94 @@ Answer file: CSS question no 9
 Answer file : CSS-Question-10
 ```
 <br>
+
+### 12) What are Pseudo class in CSS & How its different From Pseudo Elements?
+
+<br>
+#### Answer:
+```
+Pseudo-classes and pseudo-elements are both selectors in CSS that allow you to target specific
+elements based on various conditions. Here's a brief explanation of each:
+Pseudo-classes:
+Pseudo-classes are used to select and style elements based on certain states or conditions.
+They start with a colon (:) followed by the name of the pseudo-class.
+Pseudo-classes select elements that are in a specific state or meet a certain condition, such as being
+hovered over, being the first child, or being visited.
+Examples of pseudo-classes include :hover, :active, :focus, :first-child, :last-child, :nth-child(), etc.
+Pseudo-elements:
+Pseudo-elements are used to style a specific part of an element or insert content before or after an
+element.
+They start with a double colon (::) followed by the name of the pseudo-element.
+Pseudo-elements allow you to create styling and layout effects that target specific parts of an
+element, such as the first letter, the first line, or creating a decorative element before or after the
+content of an element.
+Examples of pseudo-elements include ::first-letter, ::first-line, ::before, ::after, etc.
+In summary, pseudo-classes are used to select elements based on states or conditions, while
+pseudo-elements are used to target specific parts of an element or insert content before or after an
+element. Both pseudo-classes and pseudo-elements provide additional flexibility in styling and
+manipulating elements based on different criteria.
+```
+<br>
+
+## Javascript questions:
+<br>
+### 1)What is Hoisting in Javascript ?
+<br>
+### Answer:
+```
+Hoisting is a behavior in JavaScript where variable and function declarations are moved to the top of
+their containing scope during the compilation phase, before the code is executed. This means that
+regardless of where variables and functions are declared in the code, they are treated as if they are
+declared at the beginning of their scope.
+However, it is important to note that only the declarations are hoisted, not the initializations or
+assignments. This means that while the declarations are moved to the top, the actual values
+assigned to variables or the function definitions are left in their original positions.
+Here are a few key points to understand about hoisting:
+Variable Hoisting:
+Variable declarations (using var) are hoisted to the top of their scope.
+The variable is created with an initial value of undefined until it is assigned a value.
+Example:
+javascript
+
+console.log(myVariable); // undefined
+var myVariable = 10;
+Function Hoisting:
+Function declarations (not function expressions) are hoisted to the top of their scope.
+The entire function, including its body, is hoisted.
+Example:
+javascript
+
+sayHello(); // "Hello!"
+function sayHello() {
+ console.log("Hello!");
+}
+Hoisting does not occur with block-scoped declarations (let and const). They are hoisted to the top
+of the block scope, but they are not accessible until they are declared.
+It's important to be aware of hoisting in JavaScript to avoid potential confusion and unintended
+behavior. It is considered good practice to declare variables and functions at the beginning of their
+respective scopes to improve code readability and avoid unexpected hoisting-related issues.
+```
+<br>
+
+### 2)What are different higher order functions in JS? What is the difference between .map() and .forEach()?
+<br>
+### Answer:
+The main differences between map() and forEach() are:
+Return Value: map() returns a new array with the transformed elements, while forEach() does not
+return anything. It simply iterates over the array and performs an action on each element.
+Immutability: Since map() returns a new array, it does not modify the original array. forEach(), on the
+other hand, does not create a new array and directly modifies the existing array.
+Chaining: Because map() returns a new array, you can chain multiple array methods after it.
+forEach(), being void, cannot be chained directly.
+Use Case: If you need to transform each element of an array and obtain a new array, map() is more
+suitable. If you simply want to loop over an array and perform an action for each element, forEach()
+is sufficient.
+It's important to choose the appropriate higher-order function based on your specific needs and the
+desired outcome of your code.
+```
+<br>
+
+### 3)Explain Event bubbling and Event Capturing in JavaScript with suitable examples.
+
+
+
