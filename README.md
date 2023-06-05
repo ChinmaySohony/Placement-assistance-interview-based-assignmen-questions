@@ -372,8 +372,7 @@ hierarchy in your design.
 <br>
   
   
-  ### 7)Difference between absolute and relative and sticky and fixed position explain with
-example.
+  ### 7)Difference between absolute and relative and sticky and fixed position explain with example.
   <br>
   #### Answer :
   
@@ -451,6 +450,7 @@ a web page, allowing you to achieve various visual effects and interactive desig
   
   ### 8)Build Periodic Table as shown in the below image
   <br>
+  
   #### Answer:
   ```
   Answer file: CSS question no 8
