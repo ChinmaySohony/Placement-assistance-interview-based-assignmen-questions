@@ -84,7 +84,7 @@ answer file :Html question no 4
 
 <br>
 ```
-##### Answer :
+#####Answer :
 Answer file:html question no 5
 <br>
 ```
@@ -93,8 +93,8 @@ Answer file:html question no 5
 ### 6) What are some of the advantages of HsTML5 over its previous versions?
 
 <br>
-```
-##### Answer :
+
+#####Answer :
 HTML5, the latest version of the Hypertext Markup Language, introduced several advancements and
 advantages over its previous versions. Here are some key advantages of HTML5:
 Rich Multimedia Support: HTML5 introduced native support for audio and video elements,
@@ -135,7 +135,7 @@ compatibility.
 ### 7) Create a simple Music player using html only
 
 <br>
-```
+
 #### Answer :
 Answer file :html question no 6
   <br>
@@ -145,7 +145,7 @@ Answer file :html question no 6
 ### 8) What is the difference between `<figure>` tag and `<img>` tag?
 
 <br>
-```
+
 #### Answer :
   The <figure> tag and the <img> tag serve different purposes and are used in different contexts:
 <img> tag: The <img> tag is used to embed an image within an HTML document. It is a self-closing
