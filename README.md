@@ -28,7 +28,7 @@ document, which is the latest version of HTML and is widely supported by modern 
 ### 2) Explain Semantic tags in html? And why do we need it?
 
 <br>
-```
+
 ##### Answer :
 
 ```
@@ -38,8 +38,6 @@ screen readers, and other web technologies to better understand and interpret th
 Semantic tags help improve accessibility, maintainability, and search engine optimization (SEO) of
 web pages.Overall, semantic tags enhance both the human and machine interpretation of web content,
 resulting in improved accessibility, SEO, and code maintainability.
-
-
 ```
 
 <br>
@@ -64,8 +62,6 @@ paragraph in HTML.
 In summary, tags are used to define the beginning and end of an element, while elements
 encompass both the tags and the content they enclose. HTML tags are like containers, and HTML
 elements are the actual content within those containers.
-
-
 ```
 
 <br>
@@ -73,8 +69,9 @@ elements are the actual content within those containers.
 ### 4) Build Your Resume using HTML only
 
 <br>
-```
+
 ##### Answer :
+```
 answer file :Html question no 4
 ```
 <br>
@@ -84,8 +81,9 @@ answer file :Html question no 4
 ### 5) Write Html code so that it looks like the given image
 
 <br>
+
+##### Answer :
 ```
-#####Answer :
 Answer file:html question no 5
 <br>
 ```
@@ -95,7 +93,8 @@ Answer file:html question no 5
 
 <br>
 
-#####Answer :
+##### Answer :
+```
 HTML5, the latest version of the Hypertext Markup Language, introduced several advancements and
 advantages over its previous versions. Here are some key advantages of HTML5:
 Rich Multimedia Support: HTML5 introduced native support for audio and video elements,
@@ -129,7 +128,6 @@ These are some of the key advantages that HTML5 brings over its previous version
 improvements contribute to better multimedia support, enhanced semantics, improved form
 controls, offline capabilities, performance optimizations, mobile-friendliness, and backward
 compatibility.
-
 ```
 
 
@@ -138,16 +136,18 @@ compatibility.
 <br>
 
 #### Answer :
-Answer file :html question no 6
-  <br>
 ```
-
+Answer file :html question no 6
+ 
+```
+<br>
 
 ### 8) What is the difference between `<figure>` tag and `<img>` tag?
 
 <br>
 
 #### Answer :
+```
   The <figure> tag and the <img> tag serve different purposes and are used in different contexts:
 <img> tag: The <img> tag is used to embed an image within an HTML document. It is a self-closing
 tag and does not have any content. It requires the src attribute to specify the path or URL of the
@@ -207,7 +207,9 @@ certain elements, while global attributes can be used across different elements.
 <br>
 
 #### Answer :
+```
   Answer file:html question no 10
+  ```
   <br>
 
 
@@ -443,7 +445,8 @@ In this example, the .box element is positioned 20 pixels from the top and 30 pi
 the viewport. It remains fixed at that position, even when the page is scrolled.
 These positioning properties provide flexibility in controlling the layout and behavior of elements on
 a web page, allowing you to achieve various visual effects and interactive designs.
-   ```
+  ```
+   
   <br>
   
 
@@ -463,7 +466,7 @@ Answer file: CSS question no 9
 <br>
 
 #### Answer :
-
+```
 Answer file : CSS-Question-10
-
+```
 <br>
