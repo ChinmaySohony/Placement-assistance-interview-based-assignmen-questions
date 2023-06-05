@@ -9,7 +9,6 @@
 <br>
 
 ```
-
 ##### Answer :
 ```
 Yes, <!DOCTYPE html> is indeed a tag in HTML. However, it is not a regular HTML element like <div>
