@@ -575,6 +575,7 @@ desired outcome of your code.
 ### 3)Explain Event bubbling and Event Capturing in JavaScript with suitable examples.
 
 <br>
+
 ### Answer:
 ```
 Event bubbling and event capturing are two mechanisms used by JavaScript to handle events that
@@ -648,7 +649,9 @@ DOM structures and designing event-driven JavaScript applications.
 <br>
 
 ### 4)What is function currying with example?
+
 <br>
+
 ### Answer:
 ```
 Function currying is a technique in JavaScript where a function with multiple arguments is
@@ -688,7 +691,9 @@ those partially applied functions later.
 <br>
 
 ### 5)Explain execution context diagram of following code snippets, use white board to draw.
+
 <br>
+
 ### Answer:
 ```
 Code Snippet 1:
@@ -806,6 +811,7 @@ and handle both success and error cases in a more structured manner.
 ### 7)What is ‘this’ keyword in JavaScript? explain with an example & create.
 
 <br>
+
 ### Answer:
 ```
 In JavaScript, the this keyword refers to the context in which a function is called. It is a special
