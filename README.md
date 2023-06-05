@@ -125,7 +125,6 @@ controls, offline capabilities, performance optimizations, mobile-friendliness, 
 compatibility.
 
 ```
-
 <br>
 
 ### 7) Create a simple Music player using html only
