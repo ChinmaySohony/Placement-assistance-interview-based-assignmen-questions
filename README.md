@@ -88,6 +88,8 @@ answer file :Html question no 4
 Answer file:html question no 5
 <br>
 ```
+
+
 ### 6) What are some of the advantages of HsTML5 over its previous versions?
 
 <br>
@@ -129,6 +131,7 @@ compatibility.
 
 ```
 
+
 ### 7) Create a simple Music player using html only
 
 <br>
@@ -137,6 +140,8 @@ compatibility.
 Answer file :html question no 6
   <br>
 ```
+
+
 ### 8) What is the difference between `<figure>` tag and `<img>` tag?
 
 <br>
@@ -151,6 +156,7 @@ image. The <img> tag is primarily used to display a standalone image on a web pa
 ```
 
 <br>
+
 
 ### 9) What’s the difference between html tag and attribute and give example of some global attributes?
 
@@ -194,6 +200,7 @@ certain elements, while global attributes can be used across different elements.
 
 <br>
 
+
 ### 10) build Table which looks like the given image
 
 <br>
@@ -201,6 +208,7 @@ certain elements, while global attributes can be used across different elements.
 #### Answer :
   Answer file:html question no 10
   <br>
+
 
 ## CSS Questions :
 
@@ -232,6 +240,7 @@ and margin-left.
 
 <br>
 
+
 ### 2) What are the Different Types of Selectors in CSS & what are the advantages of them?
 
 <br>
@@ -243,6 +252,7 @@ and margin-left.
 ```
 
 <br>
+
 
 ### 3) What is VW/VH & How its different from PX?
 
@@ -274,6 +284,7 @@ viewport, allowing for better flexibility and adaptability in different viewing 
 
 <br>
 
+
 ### 4) Whats difference between Inline, Inline Block and block ?
 
 <br>
@@ -300,6 +311,7 @@ and can have margins, padding, and width/height set. Examples of block elements 
 
 <br>
 
+
 ### 5)How is Border-box different from Content Box?
   <br>
 
@@ -317,6 +329,7 @@ width/height.
 ```
 
 <br>
+
 
 ### 6) What’s z-index and How does it Function ?
 
@@ -351,6 +364,7 @@ allows you to position elements in front of or behind other elements, creating d
 hierarchy in your design.
   
 ```
+
 
 <br>
   
@@ -441,6 +455,7 @@ a web page, allowing you to achieve various visual effects and interactive desig
 Answer file: CSS question no 9 
 
 <br>
+
 
 ### 10) Build Responsive Layout both desktop and mobile and Tablet, see below image for reference ?
 
