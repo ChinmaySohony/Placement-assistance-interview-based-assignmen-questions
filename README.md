@@ -7,7 +7,7 @@
 
 ### 1) `<!DOCTYPE html>` is it a tag of html? If not, what is it and why do we use it?
 <br>
-
+```
 ##### Answer :
 ```
 Yes, <!DOCTYPE html> is indeed a tag in HTML. However, it is not a regular HTML element like <div>
@@ -22,12 +22,13 @@ doctype helps the browser understand how to interpret and display the content of
 also helps ensure backward compatibility with older browsers.
 By using <!DOCTYPE html>, you are telling the browser to treat the document as an HTML5
 document, which is the latest version of HTML and is widely supported by modern web browsers.
-```
-<br>
-
+  ```
+  <br>
+  
 ### 2) Explain Semantic tags in html? And why do we need it?
 
 <br>
+```
 ##### Answer :
 
 ```
